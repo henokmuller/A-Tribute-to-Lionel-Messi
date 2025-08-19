@@ -29,15 +29,20 @@ body {
 
 #title {
   font-family: "Trebuchet MS", sans-serif;
+  font-size: 3rem;
 }
 
 #header > p {
-  font-size: 1.2rem;
+  font-size: 2rem;
+  font-style: italic;
   margin: 0;
 }
 
 figcaption {
+  margin-top: 1rem;
   margin-bottom: 1rem;
+  font-style: italic;
+  color: var(--dark);
 }
 
 .center {
@@ -62,6 +67,11 @@ figcaption {
   margin: 30px auto 5px;
 }
 
+#image:hover {
+  transform: scale(1.1);
+  transition: transform 0.3s ease-in-out;
+}
+
 li {
   margin: 10px;
 }
@@ -75,9 +85,16 @@ section {
 }
 
 section > div {
-  border: 1px solid var(--primary);
+  border: 1px solid white;
   border-radius: 30px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
   padding: 0 30px;
+}
+
+section > div:hover {
+  background: var(--secondary);
+  color: var(--light);
+  transition: background 0.3s ease-in-out, color 0.3s ease-in-out;
 }
 
 section > div > p {
