@@ -25,6 +25,11 @@ body {
   border-bottom-left-radius: 50px;
   border-bottom-right-radius: 50px;
   font-family: "Trebuchet MS", sans-serif;
+  position: fixed;
+  top: 0; /* stick to top */
+  left: 0; /* align with left edge */
+  right: 0; /* stretch full width */
+  z-index: 1000;
 }
 
 #title {
@@ -64,7 +69,7 @@ figcaption {
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin: 0 auto;
+  margin: 180px auto 0;
 }
 #image {
   max-width: 100%;
