@@ -20,7 +20,7 @@ body {
 }
 
 #header {
-  padding: 0.5rem;
+  padding: 1.5rem 1rem;
   background: linear-gradient(135deg, var(--secondary), var(--primary));
   border-bottom-left-radius: 50px;
   border-bottom-right-radius: 50px;
@@ -30,9 +30,35 @@ body {
   z-index: 1000;
 }
 
+#theme-btn {
+  position: absolute;
+  top: 15px;
+  right: 25px;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background-color: var(--accent);
+  color: #ffffff;
+  border: none;
+  font-size: 1.2rem;
+  cursor: pointer;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.3s ease, background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+#theme-btn:hover {
+  transform: scale(1.1) rotate(15deg);
+  background-color: #d35400;
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.3);
+}
+
 #title {
   font-family: "Trebuchet MS", sans-serif;
   font-size: 3rem;
+  margin-top: 0;
 }
 
 #tribute-info {
@@ -126,4 +152,44 @@ footer {
   background: var(--primary);
   padding: 10px;
   border-top: 3px solid var(--accent);
+}
+
+/* Dark Theme Styles */
+body.dark-theme {
+  background: linear-gradient(135deg, #121212, #1a1a2e);
+  color: #e0e0e0;
+  transition: background 0.4s ease, color 0.4s ease;
+}
+
+body.dark-theme #header {
+  background: linear-gradient(135deg, #0f172a, #1e293b);
+}
+
+body.dark-theme figcaption {
+  color: #cccccc;
+}
+
+body.dark-theme section > div {
+  border-color: #334155;
+  background-color: #1e293b;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
+}
+
+body.dark-theme section > div:hover {
+  background: #334155;
+  color: #ffffff;
+}
+
+body.dark-theme footer {
+  background: #0f172a;
+}
+
+body.dark-theme #theme-btn {
+  background-color: #f1c40f;
+  color: #1a1a1a;
+  box-shadow: 0 0 12px rgba(241, 196, 15, 0.6);
+}
+
+body.dark-theme #theme-btn:hover {
+  background-color: #f39c12;
 }
